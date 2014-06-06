@@ -7,7 +7,8 @@ search house info
 
 2, Host info: ubuntu 12.04, python 2.7.3, UTF-8
 
-3, ./h.py
+3, usage: run the script directly in a shell
+./h.py
 The script will run 1-2 minutes depending on zone number. 
 It will produce a file like fang/fang2014-06-06-14-26.txt.
 Add some log info are put into a file like log/log2014-06-06.txt
