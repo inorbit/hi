@@ -61,7 +61,7 @@ class Hlitem:
 def hll(item):
     pp = ""
     p = ""
-    hll_pattern = re.compile('<a href="(http\S*)" onclick')
+    hll_pattern = re.compile('<a href="(http\S*)" target')
     for item1 in item.find_all('a'):
         item1 = item1.__str__()
         a = hll_pattern.match(item1)
@@ -114,7 +114,7 @@ def hl_openpage(url):
     return (html, soup)
 
 def hl_gethousenum(html):
-    page_pattern = re.compile('共<span>(\d*)</span>套在售房源')
+    page_pattern = re.compile('<span>(\d*)</span>套在售房源')
     page_result = page_pattern.search(html)
     if page_result:
         return int(page_result.group(1))
